@@ -4,12 +4,13 @@
 
 int main(){
     lista_contatos Lista[MAX_CONTATOS];
+    int contador_tarefas = 0;
     int opcao;
     int cod;
 
-    cod = Carregar_Tarefa(Lista, &Contador_tarefas);  //utiliza da funcao "Carregar_Tarefa" para carregar as tarefas feitas dentro do programa.
-    if(cod == 1){  //a condicao so sera realizada quando o "cod" for igual a "1".
-        Contador_tarefas = 0;
+    cod = Carregar_contatos(Lista, &contador_tarefas);
+    if(cod == 1){  
+        contador_tarefas = 0;
     }
 
     do{
@@ -24,23 +25,23 @@ int main(){
 
         switch(opcao){
             case 1:
-                Adicionar_contatos(Lista, &Contador_tarefas);
+                Adicionar_contatos(Lista, &contador_tarefas);
                 break;
 
             case 2:
-                Listar_contatos(Lista, &Contador_tarefas);
+                Listar_contatos(Lista, &contador_tarefas);
                 break;
 
             case 3:
-                Deletar_contatos(Lista, &Contador_tarefas);
+                Deletar_contatos(Lista, &contador_tarefas);
                 break;
 
             case 0:
-                cod = Salvar_Tarefa(Lista, &Contador_tarefas);
+                cod = Salvar_contatos(Lista, &contador_tarefas);
                 if (cod != 0) {
                     printf("Erro ao salvar as tarefas.\n");
                 }
-                printf("u");
+                printf("___- Programa finalizado!! -___\n");
             break;
         }
 

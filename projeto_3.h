@@ -2,10 +2,10 @@
 #define PROJETO_3_CONTATOS_H
 
 #define MAX_CONTATOS 255
-#define MAX_NOME 15
-#define MAX_SOBRENOME 15
+#define MAX_NOME 30
+#define MAX_SOBRENOME 30
 #define MAX_EMAIL 50
-#define MAX_TELEFONE 12 
+#define MAX_TELEFONE 15 
 
 int *Contador_tarefas;
 

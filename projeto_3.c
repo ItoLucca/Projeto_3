@@ -50,17 +50,14 @@ int Deletar_contatos(lista_contatos Lista[], int *Contador_tarefas){
         
         for(int i = 0 ; i < *Contador_tarefas ; i++){
             if(strcmp(telefone_deletar, Lista[i].telefone) == 0){
-                Lista[i] = Lista[i + 1];
-
-                printf("-____-Lista deletada com sucesso!!-____-");
-                printf("\n");
-            }
-            else{
-                printf("Lista não encontrada.. \n");
+                for (int j = i; j < *Contador_tarefas - 1; j++) {
+                    Lista[j] = Lista[j + 1];
+                }
+                printf("-____-Contato deletado com sucesso!!-____-\n");
+                (*Contador_tarefas)--;
+                break;
             }
         }
-
-        (*Contador_tarefas --);
     }
     else{
         printf("A lista está vazia!! \n");
@@ -68,24 +65,24 @@ int Deletar_contatos(lista_contatos Lista[], int *Contador_tarefas){
 }
 
 int Salvar_contatos(lista_contatos Lista[], int *Contador_tarefas){
-    FILE *f = fopen("Agenda.txt", "wb");
+    FILE *f = fopen("Agenda.bin", "wb");
     if(f == NULL){
         return 1;
     }
     else{
-        fwrite(Contador_tarefas,sizeof(lista_contatos), 1, f);
+        fwrite(Lista, sizeof(lista_contatos), *Contador_tarefas, f);
         fclose(f);
     }
     return 0;
 }
 
 int Carregar_contatos(lista_contatos Lista[], int *Contador_tarefas){
-    FILE *f = fopen("Lista.txt", "rb");
+    FILE *f = fopen("Lista.bin", "rb");
     if(f == NULL){
         return 1;
     }
     else{
-        fread(Contador_tarefas,sizeof(lista_contatos), 1, f);
+        fread(Lista, sizeof(lista_contatos), MAX_CONTATOS, f);
         fclose(f);
     }
     return 0;
