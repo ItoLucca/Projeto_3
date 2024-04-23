@@ -42,11 +42,10 @@ int main(){
                     printf("Erro ao salvar as tarefas.\n");
                 }
                 printf("___- Programa finalizado!! -___\n");
-            break;
+                break;
         }
 
     }while(opcao = 0);
-
 
     return 0;
 }
