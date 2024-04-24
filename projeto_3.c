@@ -46,10 +46,10 @@ int Deletar_contatos(lista_contatos Lista[], int *Contador_tarefas){
     
     if(*Contador_tarefas > 0){
         printf("Digite o telefone referente a conta a ser deletada: \n");
-        scanf("%s", &telefone_deletar);
+        scanf("%s", telefone_deletar);
         
-        for(int i = 0 ; i < *Contador_tarefas ; i++){
-            if(strcmp(telefone_deletar, Lista[i].telefone) == 0){
+        for (int i = 0; i < *Contador_tarefas; i++) {
+            if (telefone_deletar == Lista[i].telefone) {
                 for (int j = i; j < *Contador_tarefas - 1; j++) {
                     Lista[j] = Lista[j + 1];
                 }
