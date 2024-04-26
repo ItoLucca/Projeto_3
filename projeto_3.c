@@ -1,4 +1,4 @@
-
+#include <string.h>
 #include <stdio.h>
 #include "projeto_3.h"
 
@@ -50,15 +50,15 @@ int Deletar_contatos(lista_contatos Lista[], int *contador_tarefas){
         scanf("%s", telefone_deletar);
         
         for (int i = 0; i < *contador_tarefas; i++) {
-            if (telefone_deletar == Lista[i].telefone) {
-                for (int j = i; j < *contador_tarefas - 1; j++) {
-                    Lista[j] = Lista[j + 1];
-                }
+            if (strcmp(telefone_deletar, Lista[i].telefone) == 0) {
+                Lista[i] = Lista[i + 1];
                 printf("-____-Contato deletado com sucesso!!-____-\n");
-                (*contador_tarefas)--;
-                break;
+            }
+            else{
+                printf("O contato nao foi encontrado. \n");
             }
         }
+        (*contador_tarefas)--;
     }
     else{
         printf("A lista está vazia!! \n");
