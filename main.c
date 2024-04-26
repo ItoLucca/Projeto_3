@@ -14,8 +14,8 @@ int main(){
     }
 
     do{
-        printf("Bem vindo a sua agenda de Contatos!! \n");
-        printf("Digite uma das opcoes abaixo: \n");
+        printf("\nBem vindo a sua agenda de Contatos!! \n");
+        printf("\nDigite uma das opcoes abaixo: \n");
 
         printf("\n ---> 1. Adicionar Contatos\n");
         printf("\n ---> 2. Listar os Contatos\n");
@@ -45,7 +45,7 @@ int main(){
                 break;
         }
 
-    }while(opcao = 0);
+    }while(opcao == 0);
 
     return 0;
 }

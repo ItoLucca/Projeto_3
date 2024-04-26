@@ -7,7 +7,6 @@
 #define MAX_EMAIL 50
 #define MAX_TELEFONE 15 
 
-
 typedef struct{
     char nome[MAX_NOME];
     char sobrenome[MAX_NOME];
