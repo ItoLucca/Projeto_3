@@ -4,7 +4,7 @@
 
 int Adicionar_contatos(lista_contatos Lista[], int *contador_tarefas){
     if(*contador_tarefas < MAX_CONTATOS){
-        printf("digite o seu nome: \n");
+        printf("\nDigite o seu nome: \n");
         scanf("%s", Lista[*contador_tarefas].nome);
 
         printf("digite o seu sobrenome: \n");

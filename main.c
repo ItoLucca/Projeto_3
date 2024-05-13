@@ -21,6 +21,7 @@ int main(){
         printf("\n ---> 2. Listar os Contatos\n");
         printf("\n ---> 3. Deletar Contato\n");
         printf("\n ---> 0. Finalizar programa\n");
+        printf("\nDigite a opcao: ");
         scanf("%d", &opcao);
 
         switch(opcao){
