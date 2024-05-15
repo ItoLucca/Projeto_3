@@ -135,8 +135,8 @@ int Salvar_contatos(lista_contatos Lista[], int *contador_tarefas){
         return 1;
     }
     else{
-//        fwrite(&contador_tarefas, sizeof(int), 1, f); 
-//        fwrite(Lista, sizeof(lista_contatos), (size_t) contador_tarefas, f);
+        fwrite(&contador_tarefas, sizeof(int), 1, f); 
+        fwrite(Lista, sizeof(lista_contatos), (size_t) contador_tarefas, f);
         fclose(f);
     }
     return 0;
@@ -149,8 +149,8 @@ int Carregar_contatos(lista_contatos Lista[], int *contador_tarefas){
         return 1;
     }
     else{
-//        fread(contador_tarefas, sizeof(int), 1, f);  
-//        fread(Lista, sizeof(lista_contatos), (size_t) *contador_tarefas, f);        
+        fread(contador_tarefas, sizeof(int), 1, f);  
+        fread(Lista, sizeof(lista_contatos), (size_t) *contador_tarefas, f);        
         fclose(f);
     }
     return 0;
