@@ -119,7 +119,7 @@ int Alterar_contatos(lista_contatos Lista[], int *contador_tarefas){
                 scanf("%s", Lista[i].telefone);
 
                 for(int j = 0 ; j < *contador_tarefas ; j++){
-                    if 
+                     
                 }
 
             }
