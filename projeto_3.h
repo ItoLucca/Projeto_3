@@ -11,6 +11,7 @@ typedef struct{
     char nome[MAX_NOME];
     char sobrenome[MAX_NOME];
     char email[MAX_EMAIL];
+    char revalida[MAX_EMAIL];
     char telefone[MAX_TELEFONE];
 } lista_contatos;
 
@@ -19,5 +20,6 @@ int Listar_contatos(lista_contatos Lista[], int *contador_tarefas);
 int Deletar_contatos(lista_contatos Lista[], int *contador_tarefas);
 int Salvar_contatos(lista_contatos Lista[], int *contador_tarefas);
 int Carregar_contatos(lista_contatos Lista[], int *contador_tarefas);
+int Alterar_contatos(lista_contatos Lista[], int *contador_tarefas);
 
 #endif //PROJETO_3_CONTATOS_H

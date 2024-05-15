@@ -44,6 +44,9 @@ int main(){
                 }
                 printf("___- Programa finalizado!! -___\n");
                 break;
+            
+            default:
+                printf("\nopcao invalida..\n");
         }
 
     }while(opcao != 0);
